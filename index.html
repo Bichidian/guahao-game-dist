@@ -32,12 +32,7 @@
       font-size: 32px;
     }
   </style>
-  <link rel="modulepreload" href="https://bichidian.github.io/guahao-game-dist/guahao-game-bbcb87daa308bc5.js"
-    crossorigin=anonymous integrity="sha384-d3OYijSbd4ctBZqgBTFSTyjoSX6zXairfyjBon7D0Rb9RbO/k1jrjB4lhuBLUYbG">
-  <link rel="preload" href="https://bichidian.github.io/guahao-game-dist/guahao-game-bbcb87daa308bc5_bg.wasm"
-    crossorigin=anonymous integrity="sha384-THeKU2z3mwa7ni9OLWnlbhQO5Yz/t6ckhD+L0JtGBZ1oqUMR1m40Fw4tlKVvyUXW" as="fetch"
-    type="application/wasm">
-</head>
+<link rel="modulepreload" href="./guahao-game-bbcb87daa308bc5.js" crossorigin=anonymous integrity="sha384-d3OYijSbd4ctBZqgBTFSTyjoSX6zXairfyjBon7D0Rb9RbO/k1jrjB4lhuBLUYbG"><link rel="preload" href="./guahao-game-bbcb87daa308bc5_bg.wasm" crossorigin=anonymous integrity="sha384-THeKU2z3mwa7ni9OLWnlbhQO5Yz/t6ckhD+L0JtGBZ1oqUMR1m40Fw4tlKVvyUXW" as="fetch" type="application/wasm"></head>
 
 <body>
   <canvas id="canvas"></canvas>
@@ -45,17 +40,16 @@
     加载中...
   </p>
 
-  <script type="module" nonce="kuzxmcUWTGDEH+gRqtSVXg==">
-    import init, * as bindings from './guahao-game-bbcb87daa308bc5.js';
-    const wasm = await init({ module_or_path: './guahao-game-bbcb87daa308bc5_bg.wasm' });
+<script type="module" nonce="PQh6QY32BvBL8uuIeSRrwQ==">
+import init, * as bindings from './guahao-game-bbcb87daa308bc5.js';
+const wasm = await init({ module_or_path: './guahao-game-bbcb87daa308bc5_bg.wasm' });
 
 
-    window.wasmBindings = bindings;
+window.wasmBindings = bindings;
 
 
-    dispatchEvent(new CustomEvent("TrunkApplicationStarted", { detail: { wasm } }));
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
 
-  </script>
-</body>
+</script></body>
 
 </html>
